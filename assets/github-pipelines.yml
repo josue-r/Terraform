@@ -1,0 +1,9 @@
+trigger:
+- main
+resources:
+  repositories:
+  - repository: Pipelines
+    type: git
+    name: pipelines
+extends:
+  template: ${type}/template.yml@pipelines
