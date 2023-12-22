@@ -43,6 +43,5 @@ terraform {
 
 
 provider "github" {
-  #   token = var.gh_pat
   owner = "josue-r"
 }
