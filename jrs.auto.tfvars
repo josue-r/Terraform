@@ -21,5 +21,13 @@ repositories = [
     branch_pipeline = "main"
     default_branch  = "main"
   },
+  {
+    name            = "ares23"
+    type            = "ms"
+    path            = "ms"
+    branch_pipeline = "main"
+    default_branch  = "main"
+  },
+
 
 ]

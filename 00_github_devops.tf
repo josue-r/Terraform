@@ -1,7 +1,7 @@
-# resource "github_repository" "foo" {
-#   name      = "ares23"
-#   auto_init = true
-# }
+resource "github_repository" "foo" {
+  name      = "ares24"
+  auto_init = false
+}
 
 resource "github_repository_file" "github_file" {
   count               = terraform.workspace != "dev" ? 0 : length(data.github_repository.repositories)
@@ -10,7 +10,7 @@ resource "github_repository_file" "github_file" {
   file                = ".gitignore"
   content             = "**/*.tfstate"
   commit_message      = "Create .github directory"
-  overwrite_on_create = true
+  overwrite_on_create = false
 
   lifecycle {
     ignore_changes = [

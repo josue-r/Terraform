@@ -1,5 +1,6 @@
 #create required prioviders: github and aws
 terraform {
+  required_version = "1.3.7"
 
   required_providers {
     github = {
@@ -13,6 +14,7 @@ terraform {
   }
 }
 provider "github" {
+  token = "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"
   owner = "josue-r"
 }
 
@@ -36,10 +38,10 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "jrs-tfstate"
+    bucket         = "josue-tfstate"
     key            = "terraform.tfstate" #checar si esta referencia es correcta
     region         = "us-east-1"
-    dynamodb_table = "terraform-backend-statelock"
+    dynamodb_table = "terraform-backend-jrs-statelock"
     encrypt        = true
   }
 }
