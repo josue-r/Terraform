@@ -12,10 +12,13 @@ terraform {
     }
   }
 }
+provider "github" {
+  owner = "josue-r"
+}
 
 #provider aws
 provider "aws" {
-  profile = "mangy-admin"
+#
   region  = "us-east-1"
 
 
@@ -41,7 +44,3 @@ terraform {
   }
 }
 
-
-provider "github" {
-  owner = "josue-r"
-}

@@ -1,7 +1,7 @@
-resource "github_repository" "foo" {
-  name      = "ares23"
-  auto_init = true
-}
+# resource "github_repository" "foo" {
+#   name      = "ares23"
+#   auto_init = true
+# }
 
 resource "github_repository_file" "github_file" {
   count               = terraform.workspace != "dev" ? 0 : length(data.github_repository.repositories)
